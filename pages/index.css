@@ -1,3 +1,5 @@
+@import url("../vendor/normalize.css");
+@import url("../vendor/fonts/font.css");
 .page {
   width: 100%;
   margin: 0;
@@ -6,6 +8,9 @@
 .header {
   background-color: #F4F4F4;
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 .header__container {
   max-width: 1440px;
@@ -33,10 +38,15 @@
 }
 
 .section {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.section__container {
   max-width: 1440px;
   margin: 0 auto;
   padding-left: 120px;
-  background-color: #F4F4F4;
+  border: 1px solid red;
+  box-sizing: border-box;
 }
 .section__title {
   font-family: Inter, Arial, sans-serif;
@@ -45,8 +55,6 @@
   line-height: 60px;
   letter-spacing: -0.5px;
   margin: 0;
-  -webkit-padding-before: 60px;
-          padding-block-start: 60px;
   -webkit-padding-after: 50px;
           padding-block-end: 50px;
   max-width: 460px;
@@ -69,6 +77,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  -webkit-padding-before: 80px;
+          padding-block-start: 80px;
 }
 .section-intro__info-part {
   display: flex;
@@ -119,7 +129,6 @@
   position: absolute;
   min-height: 430px;
   min-width: 810px;
-  border: 2px solid red;
   top: 40%;
   left: -200px;
 }
@@ -129,8 +138,104 @@
   height: 300px;
   width: 440px;
   top: 150px;
+  background-image: url("../images/cannondale-systemsix-himod.png");
+  background-color: #F4F4F4;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.section-quote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+.section-quote__main-image {
+  max-width: 650px;
+  max-height: 460px;
+  justify-self: self-end;
+}
+.section-quote__text-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-quote__quote {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  max-width: 470px;
+  color: #151515;
+  letter-spacing: -0.5px;
+}
+.section-quote__author {
+  display: flex;
+  flex-direction: column;
+}
+.section-quote__author-name {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #151515;
+  margin-bottom: 6px;
+}
+.section-quote__author-subline {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #222222;
+}
+
+.section-highway {
+  display: flex;
+  flex-direction: column;
+  -webkit-padding-after: 50px;
+          padding-block-end: 50px;
+  -webkit-padding-before: 60px;
+          padding-block-start: 60px;
+}
+
+.section-bicycles {
+  -webkit-padding-before: 60px;
+          padding-block-start: 60px;
+}
+
+.section-training {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 150px 120px 120px;
+}
+.section-training__text-part {
+  display: flex;
+  flex-direction: column;
+}
+.section-training__main-image {
+  height: 460px;
+  width: 580px;
+}
+.section-training__links {
+  margin-top: 180px;
+  display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  gap: 30px;
+}
+.section-training__link {
+  text-decoration: none;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #151515;
 }
 
 .footer {
-  height: 1500px;
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

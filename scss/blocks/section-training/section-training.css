@@ -1,0 +1,17 @@
+.section-training {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 150px 120px 120px;
+}
+.section-training__text-part {
+  display: flex;
+  flex-direction: column;
+}
+.section-training__main-image {
+  height: 460px;
+  width: 580px;
+}
+.section-training__links {
+  margin-top: 180px;
+}/*# sourceMappingURL=section-training.css.map */

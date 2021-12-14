@@ -1,9 +1,18 @@
 @import "../scss/variables.scss";
 @import "../scss/mixins.scss";
+@import url("../vendor/normalize.css");
+@import url("../vendor/fonts/font.css");
 
 @import "../scss/blocks/page/page.scss";
 @import "../scss/blocks/header/header.scss";
 @import "../scss/blocks/main/main.scss";
 @import "../scss/blocks/section/section.scss";
 @import "../scss/blocks/section-intro/section-intro.scss";
+@import "../scss/blocks/section-quote/section-quote.scss";
+@import "../scss/blocks/section-highway/section-highway.scss";
+@import "../scss/blocks/section-bicycles/section-bicycles.scss";
+@import "../scss/blocks/section-training/section-training.scss";
+
+
+
 @import "../scss/blocks/footer/footer.scss";

@@ -1,14 +1,18 @@
 .section {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 120px;
-  background-color: #F4F4F4;
+  width: 100%;
+  background-color: #f4f4f4;
 
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 120px;
+    border: 1px solid red;
+    box-sizing: border-box;
+  }
   &__title {
     @include font(700, 55px, 60px);
     letter-spacing: -0.5px;
     margin: 0;
-    padding-block-start: 60px;
     padding-block-end: 50px;
     max-width: 460px;
     color: $headers-color;

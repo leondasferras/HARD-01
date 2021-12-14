@@ -1,0 +1,32 @@
+.section-training {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 150px 120px 120px;
+
+  &__text-part {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  &__main-image {
+    height: 460px;
+    width: 580px;
+  }
+
+  &__links {
+    margin-top: 180px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 30px;
+
+  }
+
+  &__link {
+    text-decoration: none;
+    @include font (600, 18px, 28px);
+    color:$headers-color;
+  }
+}

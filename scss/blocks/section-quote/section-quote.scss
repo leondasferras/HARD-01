@@ -1,0 +1,42 @@
+.section-quote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  &__main-image {
+    max-width:650px;
+    max-height: 460px;
+    justify-self: self-end;
+  }
+
+  &__text-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__quote {
+    @include font(600, 34px, 44px);
+    max-width: 470px;
+    color: $headers-color;
+    letter-spacing: -0.5px;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    @include font(500, 20px, 32px);
+    color: $headers-color;
+    margin-bottom: 6px;
+  }
+
+  &__author-subline {
+    @include font(400, 16px, 28px);
+    color: $text-color;
+  }
+}
