@@ -1,0 +1,136 @@
+.page {
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  background-color: #F4F4F4;
+  width: 100%;
+}
+.header__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.header__links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, -webkit-max-content);
+  grid-template-columns: repeat(3, max-content);
+  gap: 34px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.header__link {
+  font-family: Inter, Arial, sans-serif;
+}
+
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 120px;
+  background-color: #F4F4F4;
+}
+.section__title {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  -webkit-padding-before: 60px;
+          padding-block-start: 60px;
+  -webkit-padding-after: 50px;
+          padding-block-end: 50px;
+  max-width: 460px;
+  color: #151515;
+  display: inline-block;
+}
+.section__description {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 460px;
+  margin: 0;
+  color: #222222;
+  opacity: 0.7;
+  display: inline-block;
+}
+
+.section-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section-intro__info-part {
+  display: flex;
+  flex-direction: column;
+}
+.section-intro__image-part {
+  position: relative;
+}
+.section-intro__main-image {
+  -webkit-padding-before: 20px;
+          padding-block-start: 20px;
+}
+.section-intro__button {
+  width: 180px;
+  color: #FFFFFF;
+  background-color: #24B47E;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  padding: 16px 0;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  -webkit-margin-before: 60px;
+          margin-block-start: 60px;
+}
+.section-intro__bike-caption {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #151515;
+  -webkit-margin-before: 167px;
+          margin-block-start: 167px;
+  display: flex;
+  align-items: center;
+}
+.section-intro__caption-line {
+  width: 132px;
+  border-top: 2px solid #D7D4D4;
+  display: inline-block;
+  -webkit-margin-start: 30px;
+          margin-inline-start: 30px;
+}
+.section-intro__sticky-container {
+  position: absolute;
+  min-height: 430px;
+  min-width: 810px;
+  border: 2px solid red;
+  top: 40%;
+  left: -200px;
+}
+.section-intro__bike-image {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 300px;
+  width: 440px;
+  top: 150px;
+}
+
+.footer {
+  height: 1500px;
+}/*# sourceMappingURL=index.css.map */

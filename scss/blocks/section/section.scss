@@ -1,0 +1,26 @@
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 120px;
+  background-color: #F4F4F4;
+
+  &__title {
+    @include font(700, 55px, 60px);
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding-block-start: 60px;
+    padding-block-end: 50px;
+    max-width: 460px;
+    color: $headers-color;
+    display: inline-block;
+  }
+
+  &__description {
+    @include font(400, 18px, 28px);
+    max-width: 460px;
+    margin: 0;
+    color: $text-color;
+    opacity: 0.7;
+    display: inline-block;
+  }
+}

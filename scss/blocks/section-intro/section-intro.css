@@ -1,0 +1,16 @@
+.section-intro {
+  display: flex;
+  flex-direction: row;
+}
+.section-intro__main-image {
+  -webkit-padding-before: 20px;
+          padding-block-start: 20px;
+}
+.section-intro__button {
+  width: 180px;
+  color: #FFFFFF;
+  background-color: #24B47E;
+  border-radius: 4px;
+  border: none;
+  padding: 16px 10px;
+}/*# sourceMappingURL=section-intro.css.map */

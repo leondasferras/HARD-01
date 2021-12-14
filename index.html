@@ -4,17 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Шоссе, ТТ и Грэвел</title>
 </head>
 <body class="page">
   <header class="header">
-    <ul class="header-links-list">
-      <li class="header-link">Покрытия и градиенты</li>
-      <li class="header-link">Велосипеды</li>
-      <li class="header-link">Тренировки</li>
-    </ul>
+    <div class="header__container">
+      <nav class="header__navigation">
+        <ul class="header__links">
+          <li class="header__link">Покрытия и градиенты</li>
+          <li class="header__link">Велосипеды</li>
+          <li class="header__link">Тренировки</li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main class="content"></main>
+  <main class="content">
+    <section class="section section-intro">
+      <div class="section-intro__info-part">
+      <h1 class="section__title">Шоссе, ТТ 
+        и Грэвел</h1>
+      <p class="section__description">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+      <button class="section-intro__button" type="button">Подробнее</button>
+      <span class="section-intro__bike-caption">Cannondale Systemsix <div class="section-intro__caption-line"></div></span>
+    </div>
+    <div class="section-intro__image-part">
+      <img class="section-intro__main-image" src="./images/wood-road.png" alt="Дорога в лес">
+      <div class="section-intro__sticky-container">
+        <img class="section-intro__bike-image" src="./images/Cannondale Systemsix Himod.png">
+      </div>
+    </div>
+    </section>
+  </main>
   <footer class="footer"></footer>
 </body>
 </html>
