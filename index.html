@@ -35,8 +35,8 @@
           <button class="section-intro__button" type="button">Подробнее</button>
           <span class="section-intro__bike-caption">
             Cannondale Systemsix 
-            <div class="section-intro__caption-line">
-            </div>
+            <span class="section-intro__caption-line">
+            </span>
           </span>
         </div>
         <div class="section-intro__image-part">
@@ -85,12 +85,28 @@
             <a href="" class="section-training__link">Komoot</a>
           </div>
         </div>
-        <img class="section-training__main-image" src="./images/training-road.png"></img>
+        <img class="section-training__main-image" src="./images/training-road.png" alt="Поворот дороги"></img>
       </div>
     </section>
   </main>
   <footer class="footer">
-    
+    <div class="footer__container">
+      <div class="footer__subscribe-and-copyright">
+        <h3 class="footer__subscribe-title">Подпишитесь на рассылку —</h3>
+        <form class="footer__subscribe-form">
+          <input type="email" class="footer__subscribe-input" placeholder="Ваш e-mail">
+          <button class="footer__subscribe-button" type="button">ok</button>
+        </form>
+        <span class="footer__copyright">&copy;Road Club 2021</span>
+      </div>
+      <div class="footer__theme-switch">
+        <img src="./images/light-theme-icon.svg" alt="свет">
+        <div class="footer__switch-container">
+          <div class="footer__switch"></div>
+        </div>
+        <img src="./images/dark-theme-icon.svg" alt="тьма">
+      </div>
+    </div>
   </footer>
   <script src="./script/script.js"></script>
 </body>

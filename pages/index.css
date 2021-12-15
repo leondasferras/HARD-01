@@ -16,6 +16,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 28px 120px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -25,7 +26,6 @@
   margin: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, -webkit-max-content);
   grid-template-columns: repeat(3, max-content);
   gap: 34px;
   font-family: Inter, Arial, sans-serif;
@@ -55,8 +55,7 @@
   line-height: 60px;
   letter-spacing: -0.5px;
   margin: 0;
-  -webkit-padding-after: 50px;
-          padding-block-end: 50px;
+  padding-block-end: 50px;
   max-width: 460px;
   color: #151515;
   display: inline-block;
@@ -77,8 +76,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  -webkit-padding-before: 80px;
-          padding-block-start: 80px;
+  padding-block-start: 80px;
 }
 .section-intro__info-part {
   display: flex;
@@ -88,8 +86,7 @@
   position: relative;
 }
 .section-intro__main-image {
-  -webkit-padding-before: 20px;
-          padding-block-start: 20px;
+  padding-block-start: 20px;
 }
 .section-intro__button {
   width: 180px;
@@ -104,8 +101,7 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 1px;
-  -webkit-margin-before: 60px;
-          margin-block-start: 60px;
+  margin-block-start: 60px;
 }
 .section-intro__bike-caption {
   font-family: Inter, Arial, sans-serif;
@@ -113,8 +109,7 @@
   font-size: 18px;
   line-height: 18px;
   color: #151515;
-  -webkit-margin-before: 167px;
-          margin-block-start: 167px;
+  margin-block-start: 167px;
   display: flex;
   align-items: center;
 }
@@ -122,8 +117,7 @@
   width: 132px;
   border-top: 2px solid #D7D4D4;
   display: inline-block;
-  -webkit-margin-start: 30px;
-          margin-inline-start: 30px;
+  margin-inline-start: 30px;
 }
 .section-intro__sticky-container {
   position: absolute;
@@ -133,7 +127,6 @@
   left: -200px;
 }
 .section-intro__bike-image {
-  position: -webkit-sticky;
   position: sticky;
   height: 300px;
   width: 440px;
@@ -195,15 +188,12 @@
 .section-highway {
   display: flex;
   flex-direction: column;
-  -webkit-padding-after: 50px;
-          padding-block-end: 50px;
-  -webkit-padding-before: 60px;
-          padding-block-start: 60px;
+  padding-block-end: 50px;
+  padding-block-start: 60px;
 }
 
 .section-bicycles {
-  -webkit-padding-before: 60px;
-          padding-block-start: 60px;
+  padding-block-start: 60px;
 }
 
 .section-training {
@@ -223,7 +213,6 @@
 .section-training__links {
   margin-top: 180px;
   display: grid;
-  grid-template-columns: repeat(2, -webkit-max-content);
   grid-template-columns: repeat(2, max-content);
   gap: 30px;
 }
@@ -238,4 +227,83 @@
 
 .footer {
   width: 100%;
-}/*# sourceMappingURL=index.css.map */
+  background-color: #EFEFEF;
+}
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 80px 120px 60px;
+  border: 1px solid red;
+}
+.footer__subscribe-title {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 230px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.footer__subscribe-form {
+  margin-bottom: 100px;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  border-radius: 4px;
+  min-width: 360px;
+  display: flex;
+  flex-direction: row;
+  padding: 11px 20px;
+}
+.footer__subscribe-input {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  flex-grow: 2;
+  border: none;
+  background-color: #EFEFEF;
+  outline: none;
+}
+.footer__subscribe-input:focus {
+  outline: none;
+}
+.footer__subscribe-button {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 28px;
+  border: none;
+}
+.footer__copyright {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #CFCFCF;
+}
+.footer__theme-switch {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+.footer__switch-container {
+  width: 44px;
+  height: 24px;
+  border-radius: 20px;
+  background: #fff;
+  margin: 0 20px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.footer__switch {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #24B47E;
+  z-index: 20;
+}
+
+/*# sourceMappingURL=index.css.map */
