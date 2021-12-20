@@ -20,7 +20,7 @@
   &__quote {
     @include font(600, 34px, 44px);
     max-width: 470px;
-    color: $headers-color;
+    color: var(--headers-color);
     letter-spacing: -0.5px;
   }
 
@@ -31,12 +31,12 @@
 
   &__author-name {
     @include font(500, 20px, 32px);
-    color: $headers-color;
+    color: var(--headers-color);
     margin-bottom: 6px;
   }
 
   &__author-subline {
     @include font(400, 16px, 28px);
-    color: $text-color;
+    color: var(--text-color);
   }
 }

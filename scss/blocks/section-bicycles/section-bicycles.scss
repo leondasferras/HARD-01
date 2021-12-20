@@ -1,3 +1,39 @@
 .section-bicycles {
   padding-block-start: 60px;
+  padding-inline-end: 120px;
+
+  &__carousel-container {
+    overflow: hidden;
+  }
+
+  &__carousel-track {
+    display: flex;
+    flex-direction: row;
+    transition: .3s;
+
+
+  }
+
+  &__carousel-item {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  &__carousel-picture-wrapper {
+    width: 380px;
+    height: 380px;
+    padding: 20px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-inline-end: 30px;
+    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+  }
+
+  &__carousel-picture {
+    width: 340px;
+  }
 }

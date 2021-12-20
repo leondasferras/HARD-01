@@ -27,6 +27,6 @@
   &__link {
     text-decoration: none;
     @include font (600, 18px, 28px);
-    color:$headers-color;
+    color:var(--headers-color);
   }
 }

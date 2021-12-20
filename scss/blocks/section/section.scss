@@ -1,12 +1,12 @@
 .section {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: var(--main-bg-color);
+  transition: background-color 0.3s linear;
 
   &__container {
     max-width: 1440px;
     margin: 0 auto;
     padding-left: 120px;
-    border: 1px solid red;
     box-sizing: border-box;
   }
   &__title {
@@ -15,7 +15,7 @@
     margin: 0;
     padding-block-end: 50px;
     max-width: 460px;
-    color: $headers-color;
+    color: var(--headers-color);
     display: inline-block;
   }
 
@@ -23,7 +23,7 @@
     @include font(400, 18px, 28px);
     max-width: 460px;
     margin: 0;
-    color: $text-color;
+    color: var(--text-color);
     opacity: 0.7;
     display: inline-block;
   }
