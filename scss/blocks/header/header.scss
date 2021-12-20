@@ -23,9 +23,16 @@
     grid-template-columns: repeat(3, max-content);
     gap: 34px;
     @include font(500, 14px, 18px);
+    color: var(--headers-color);
   }
 
   &__link {
     font-family: $font-stack;
+    cursor: pointer;
+  }
+
+  &__link:hover {
+    opacity: 0.75;
+    transition: opacity 0.2s linear;
   }
 }

@@ -7,12 +7,13 @@
   &__carousel-wrapper {
     overflow: hidden;
     margin-block-start: 80px;
+    position: relative;
   }
 
   &__carousel-track {
     display: flex;
     transition: .3s;
-  }
+    }
 
   &__carousel-item {
     padding-inline-end: 40px;
@@ -40,6 +41,14 @@
 
 
 }
+  &__carousel-road-icon {
+    background-image: url("../images/slider-icon-highway.svg");
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    bottom: 16px;
+    z-index: 10000;
+  }
 }
 
 .active-dot {

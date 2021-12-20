@@ -37,15 +37,25 @@
     border: none;
     background-color: var(--footer-bg-color);
     outline: none;
+    color:var(--text-color);
 
     &:focus {
       outline: none;
+      color: var(--headers-color);
+    }
+
+    &:focus + button {
+      display: block;
     }
 
   }
   &__subscribe-button {
+    display: none;
     @include font(500, 13px, 28px);
     border: none;
+    color: var(--headers-color);
+    background-color: transparent;
+    cursor: pointer;
   }
 
   &__copyright {
