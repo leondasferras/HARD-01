@@ -32,7 +32,7 @@
 
   &__bike-caption {
     @include font(400, 18px, 18px);
-    color: $headers-color;
+    color: var(--headers-color);
     margin-block-start: 167px;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@
 
   &__caption-line {
     width: 132px;
-    border-top: 2px solid $line-color;
+    border-top: 2px solid var(--line-color);
     display: inline-block;
     margin-inline-start: 30px;
   }

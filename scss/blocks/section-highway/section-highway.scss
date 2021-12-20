@@ -3,4 +3,45 @@
   flex-direction: column;
   padding-block-end: 50px;
   padding-block-start: 60px;
+
+  &__carousel-wrapper {
+    overflow: hidden;
+    margin-block-start: 80px;
+  }
+
+  &__carousel-track {
+    display: flex;
+    transition: .3s;
+  }
+
+  &__carousel-item {
+    padding-inline-end: 40px;
+  }
+
+  &__carousel-buttons {
+    margin-block-start: 50px;
+
+  }
+
+  &__carousel-button {
+    width: 50px;
+    height: 50px;
+    background-color: #EBEBEB;
+    border: none;
+    border-radius: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/button-left.svg");
+    padding: 0;
+
+    &_move_next {
+      transform: scale(-1, 1);
+    }
+
+
+}
+}
+
+.active-dot {
+  color: red;
 }

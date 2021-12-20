@@ -1,17 +1,17 @@
-.section-training {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 150px 120px 120px;
+/* Error: Undefined mixin.
+ *    ,
+ * 29 |     @include font (600, 18px, 28px);
+ *    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   section-training.scss 29:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 29 \2502      @include font (600, 18px, 28px);\d\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   section-training.scss 29:5  root stylesheet";
 }
-.section-training__text-part {
-  display: flex;
-  flex-direction: column;
-}
-.section-training__main-image {
-  height: 460px;
-  width: 580px;
-}
-.section-training__links {
-  margin-top: 180px;
-}/*# sourceMappingURL=section-training.css.map */
