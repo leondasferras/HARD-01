@@ -21,6 +21,9 @@
 
   &__carousel-buttons {
     margin-block-start: 50px;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    gap: 20px
 
   }
 
@@ -42,15 +45,22 @@
 
 }
   &__carousel-road-icon {
-    background-image: url("../images/slider-icon-highway.svg");
-    width: 100px;
+      width: 100px;
     height: 40px;
     position: absolute;
-    bottom: 16px;
     z-index: 10000;
+    bottom: 16px;
+
+    &_bg_highway {
+      background-image: url("../images/slider-icon-highway.svg");
+    }
+    &_bg_gravel {
+      background-image: url("../images/slider-icon-gravel.svg");
+    }
+    &_bg_tt {
+      background-image: url("../images/slider-icon-tt.svg");
+    }
   }
+
 }
 
-.active-dot {
-  color: red;
-}

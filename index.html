@@ -7,6 +7,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Шоссе, ТТ и Грэвел</title>
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+
+
+  <!--стили слайдера1 общие-->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .mySwiper {
+      margin-block-start: 80px;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: transparent;
+
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
+
+
+<!--  стили слайдера2-->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: flex-start;
+
+    }
+    .slide-title {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      padding-left: 20px;
+    }
+    .swiper-slide2 {
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .swiper-pagination-bullet-active {
+      color: #151515;
+
+    }
+  </style>
+
 </head>
 
 <body class="page">
@@ -63,30 +186,19 @@
     <section class="section">
       <div class="section__container section-highway">
         <h2 class="section__title carousel-title">
-          Шоссе
         </h2>
         <p class="section__description carousel-description">
-          На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.
         </p>
-        <div class="section-highway__carousel-wrapper">
-          <div class="section-highway__carousel-track">
-            
-            <div class="section-highway__carousel-item"> 
-              <img src="./images/road-turn.png">
-            </div>
-            
-            <div class="section-highway__carousel-item">
-              <img src="./images/wood-biker.png">
-            </div>
-            
-            <div class="section-highway__carousel-item">
-              <img src="./images/field-road.png">
-            </div>
-            
-          </div>
-          <div class="section-highway__carousel-road-icon"></div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/road-turn.png"></div>
+            <div class="swiper-slide"><img src="images/wood-biker.png"></div>
+            <div class="swiper-slide"><img src="images/field-road.png"></div>
+
+      </div>
+          <div class="section-highway__carousel-road-icon section-highway__carousel-road-icon_bg_highway "></div>
         </div>
-        <div class="section-highway__carousel-buttons">
+              <div class="section-highway__carousel-buttons">
           <button class="section-highway__carousel-button section-highway__carousel-button_move_prev"></button>
           <button class="section-highway__carousel-button section-highway__carousel-button_move_next"></button>
         </div>
@@ -95,30 +207,53 @@
     <section class="section">
       <div class="section__container section-bicycles">
         <h2 class="section__title">Велосипеды</h2>
-        <div class ="section-bicycles__buttons">
-          <button class="section-bicycles__button button-highway active-dot">Шоссе</button>
-          <button class="section-bicycles__button button-gravel">Грэвэл</button>
-          <button class="section-bicycles__button button-tt">ТТ</button>
+
+        <div class="swiper mySwiper2">
+          <div class="swiper-wrapper ">
+
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/cervelo-caledonia-5.png" alt="">
+             <span class="slide-title">Cervelo Caledonia-5</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/cannondale-systemsix-himod.png" alt="">
+              <span class="slide-title">Cannondale Systemsix Himod</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/trek-domane-sl-7.png" alt="">
+              <span class="slide-title">Trek Domane SL-7</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/cervelo-aspero-grx-810.png" alt="">
+              <span class="slide-title">Cervelo Aspero GRX 810</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/specialized-s-works-diverge.png" alt="">
+              <span class="slide-title">Specialized S-Works Diverge</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/cannondale-topstone-lefty- 3.png" alt="">
+              <span class="slide-title">Cannondale Topstone Lefty 3</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/specialized-s-works-shiv.png" alt="">
+              <span class="slide-title">Specialized S-Works Shiv</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/bmc-timemachine-01.png" alt="">
+              <span class="slide-title">BMC Timemachine 01 ONE</span>
+            </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/cervelo-p-series.png" alt="">
+              <span class="slide-title">Cervelo P-Series</span>
+            </div>
+
+
         </div>
-        <div class="section-bicycles__carousel-container">
-          <div class="section-bicycles__carousel-track">
-            <div class="section-bicycles__carousel-item">
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/cannondale-systemsix-himod.png" alt=""></div>
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/cervelo-caledonia-5.png" alt=""></div>
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/trek-domane-sl-7.png" alt=""></div>
-            </div>
-            <div class="section-bicycles__carousel-item">
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/cervelo-aspero-grx-810.png" alt=""></div>
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/specialized-s-works-diverge.png" alt=""></div>
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/cannondale-topstone-lefty- 3.png" alt=""></div>
-            </div>
-            <div class="section-bicycles__carousel-item">
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/specialized-s-works-shiv.png" alt=""></div>
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/bmc-timemachine-01.png" alt=""></div>
-              <div class="section-bicycles__carousel-picture-wrapper"><img src="./images/cervelo-p-series.png" alt=""></div>
-            </div>
+          <div class="swiper-pagination">
           </div>
-        </div>
+
+      </div>
       </div>
     </section>
     <section class="section">
@@ -154,6 +289,32 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+<!--  слайдер с дорогами-->
+  <script>
+   
+  </script>
+
+<!--
+  сайдер с велосипедами-->
+
+  <script>
+    var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + "</span>";
+        },
+      },
+    });
+  </script>
   <script src="./script/script.js"></script>
 </body>
 

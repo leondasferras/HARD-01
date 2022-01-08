@@ -42,6 +42,7 @@
   margin: 0;
   list-style: none;
   display: grid;
+  grid-template-columns: repeat(3, -webkit-max-content);
   grid-template-columns: repeat(3, max-content);
   gap: 34px;
   font-family: Inter, Arial, sans-serif;
@@ -77,7 +78,8 @@
   line-height: 60px;
   letter-spacing: -0.5px;
   margin: 0;
-  padding-block-end: 50px;
+  -webkit-padding-after: 50px;
+          padding-block-end: 50px;
   max-width: 460px;
   color: var(--headers-color);
   display: inline-block;
@@ -98,7 +100,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-block-start: 80px;
+  -webkit-padding-before: 80px;
+          padding-block-start: 80px;
 }
 .section-intro__info-part {
   display: flex;
@@ -108,7 +111,8 @@
   position: relative;
 }
 .section-intro__main-image {
-  padding-block-start: 20px;
+  -webkit-padding-before: 20px;
+          padding-block-start: 20px;
 }
 .section-intro__button {
   width: 180px;
@@ -123,7 +127,8 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 1px;
-  margin-block-start: 60px;
+  -webkit-margin-before: 60px;
+          margin-block-start: 60px;
 }
 .section-intro__bike-caption {
   font-family: Inter, Arial, sans-serif;
@@ -131,7 +136,8 @@
   font-size: 18px;
   line-height: 18px;
   color: var(--headers-color);
-  margin-block-start: 167px;
+  -webkit-margin-before: 167px;
+          margin-block-start: 167px;
   display: flex;
   align-items: center;
 }
@@ -139,7 +145,8 @@
   width: 132px;
   border-top: 2px solid var(--line-color);
   display: inline-block;
-  margin-inline-start: 30px;
+  -webkit-margin-start: 30px;
+          margin-inline-start: 30px;
 }
 .section-intro__sticky-container {
   position: absolute;
@@ -149,6 +156,7 @@
   left: -200px;
 }
 .section-intro__bike-image {
+  position: -webkit-sticky;
   position: sticky;
   height: 300px;
   width: 440px;
@@ -210,12 +218,15 @@
 .section-highway {
   display: flex;
   flex-direction: column;
-  padding-block-end: 50px;
-  padding-block-start: 60px;
+  -webkit-padding-after: 50px;
+          padding-block-end: 50px;
+  -webkit-padding-before: 60px;
+          padding-block-start: 60px;
 }
 .section-highway__carousel-wrapper {
   overflow: hidden;
-  margin-block-start: 80px;
+  -webkit-margin-before: 80px;
+          margin-block-start: 80px;
   position: relative;
 }
 .section-highway__carousel-track {
@@ -223,10 +234,16 @@
   transition: 0.3s;
 }
 .section-highway__carousel-item {
-  padding-inline-end: 40px;
+  -webkit-padding-end: 40px;
+          padding-inline-end: 40px;
 }
 .section-highway__carousel-buttons {
-  margin-block-start: 50px;
+  -webkit-margin-before: 50px;
+          margin-block-start: 50px;
+  display: grid;
+  grid-template-columns: -webkit-min-content -webkit-min-content;
+  grid-template-columns: min-content min-content;
+  gap: 20px;
 }
 .section-highway__carousel-button {
   width: 50px;
@@ -243,21 +260,27 @@
   transform: scale(-1, 1);
 }
 .section-highway__carousel-road-icon {
-  background-image: url("../images/slider-icon-highway.svg");
   width: 100px;
   height: 40px;
   position: absolute;
-  bottom: 16px;
   z-index: 10000;
+  bottom: 16px;
 }
-
-.active-dot {
-  color: red;
+.section-highway__carousel-road-icon_bg_highway {
+  background-image: url("../images/slider-icon-highway.svg");
+}
+.section-highway__carousel-road-icon_bg_gravel {
+  background-image: url("../images/slider-icon-gravel.svg");
+}
+.section-highway__carousel-road-icon_bg_tt {
+  background-image: url("../images/slider-icon-tt.svg");
 }
 
 .section-bicycles {
-  padding-block-start: 60px;
-  padding-inline-end: 120px;
+  -webkit-padding-before: 60px;
+          padding-block-start: 60px;
+  -webkit-padding-end: 120px;
+          padding-inline-end: 120px;
 }
 .section-bicycles__carousel-container {
   overflow: hidden;
@@ -280,7 +303,8 @@
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  margin-inline-end: 30px;
+  -webkit-margin-end: 30px;
+          margin-inline-end: 30px;
   filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
 }
 .section-bicycles__carousel-picture {
@@ -304,6 +328,7 @@
 .section-training__links {
   margin-top: 180px;
   display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
   grid-template-columns: repeat(2, max-content);
   gap: 30px;
 }
@@ -359,6 +384,7 @@
   background-color: var(--footer-bg-color);
   outline: none;
   color: var(--text-color);
+  transition: background-color 0.3s linear;
 }
 .footer__subscribe-input:focus {
   outline: none;
@@ -410,6 +436,4 @@
   background: #24B47E;
   z-index: 20;
   transition: transform 250ms;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

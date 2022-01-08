@@ -38,6 +38,7 @@
     background-color: var(--footer-bg-color);
     outline: none;
     color:var(--text-color);
+    transition: background-color 0.3s linear;
 
     &:focus {
       outline: none;
