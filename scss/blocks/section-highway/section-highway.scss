@@ -12,8 +12,8 @@
 
   &__carousel-track {
     display: flex;
-    transition: .3s;
-    }
+    transition: 0.3s;
+  }
 
   &__carousel-item {
     padding-inline-end: 40px;
@@ -23,14 +23,13 @@
     margin-block-start: 50px;
     display: grid;
     grid-template-columns: min-content min-content;
-    gap: 20px
-
+    gap: 20px;
   }
 
   &__carousel-button {
     width: 50px;
     height: 50px;
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
     border: none;
     border-radius: 50px;
     background-position: center;
@@ -41,11 +40,10 @@
     &_move_next {
       transform: scale(-1, 1);
     }
+  }
 
-
-}
   &__carousel-road-icon {
-      width: 100px;
+    width: 100px;
     height: 40px;
     position: absolute;
     z-index: 10000;
@@ -62,5 +60,7 @@
     }
   }
 
+  &__description {
+    margin-block-end: 80px;
+  }
 }
-

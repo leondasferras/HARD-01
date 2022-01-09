@@ -6,114 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <title>Шоссе, ТТ и Грэвел</title>
-  <link
-          rel="stylesheet"
-          href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
 
-
-
-  <!--стили слайдера1 общие-->
   <style>
     .swiper {
       width: 100%;
       height: 100%;
-      position: relative;
-    }
-
-    .mySwiper {
-      margin-block-start: 80px;
-    }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: transparent;
-
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
     }
 
     .swiper-slide img {
-      display: block;
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  </style>
-
-
-<!--  стили слайдера2-->
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: flex-start;
-
-    }
-    .slide-title {
-      font-family: Inter;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      padding-left: 20px;
-    }
-    .swiper-slide2 {
-      max-width: 380px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
     .swiper-pagination-bullet {
@@ -126,7 +29,6 @@
 
     .swiper-pagination-bullet-active {
       color: #151515;
-
     }
   </style>
 
@@ -151,13 +53,13 @@
           <h1 class="section__title">
             Шоссе, ТТ и Грэвел
           </h1>
-          <p class="section__description">
+          <p class="section__description section-intro__description">
             Триатлонные старты, горные серпантины или грейвел заезды по живописным
             маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.
           </p>
           <button class="section-intro__button" type="button">Подробнее</button>
           <span class="section-intro__bike-caption">
-            Cannondale Systemsix 
+            Cannondale Systemsix
             <span class="section-intro__caption-line">
             </span>
           </span>
@@ -165,7 +67,7 @@
         <div class="section-intro__image-part">
           <img class="section-intro__main-image" src="./images/wood-road.png" alt="Дорога в лес">
           <div class="section-intro__sticky-container">
-            <div class="section-intro__bike-image" >
+            <div class="section-intro__bike-image">
             </div>
           </div>
         </div>
@@ -187,33 +89,35 @@
       <div class="section__container section-highway">
         <h2 class="section__title carousel-title">
         </h2>
-        <p class="section__description carousel-description">
+        <p class="section__description section-highway__description carousel-description">
         </p>
-        <div class="swiper mySwiper">
+
+        <div class="swiper swiper-landscape">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="images/road-turn.png"></div>
             <div class="swiper-slide"><img src="images/wood-biker.png"></div>
             <div class="swiper-slide"><img src="images/field-road.png"></div>
-
-      </div>
+          </div>
           <div class="section-highway__carousel-road-icon section-highway__carousel-road-icon_bg_highway "></div>
         </div>
-              <div class="section-highway__carousel-buttons">
+
+        <div class="section-highway__carousel-buttons">
           <button class="section-highway__carousel-button section-highway__carousel-button_move_prev"></button>
           <button class="section-highway__carousel-button section-highway__carousel-button_move_next"></button>
         </div>
+
       </div>
     </section>
     <section class="section">
       <div class="section__container section-bicycles">
         <h2 class="section__title">Велосипеды</h2>
 
-        <div class="swiper mySwiper2">
-          <div class="swiper-wrapper ">
+        <div class="swiper swiper-bicycles">
+          <div class="swiper-wrapper">
 
-            <div class="swiper-slide swiper-slide2">
+            <!-- <div class="swiper-slide swiper-slide2">
               <img src="./images/cervelo-caledonia-5.png" alt="">
-             <span class="slide-title">Cervelo Caledonia-5</span>
+              <span class="slide-title">Cervelo Caledonia-5</span>
             </div>
             <div class="swiper-slide swiper-slide2">
               <img src="./images/cannondale-systemsix-himod.png" alt="">
@@ -247,20 +151,26 @@
               <img src="./images/cervelo-p-series.png" alt="">
               <span class="slide-title">Cervelo P-Series</span>
             </div>
+            <div class="swiper-slide swiper-slide2">
+              <img src="./images/cervelo-p-series.png" alt="">
+              <span class="slide-title">Cervelo P-Series</span>
+            </div> -->
 
+          </div>
 
-        </div>
           <div class="swiper-pagination">
           </div>
 
-      </div>
+        </div>
       </div>
     </section>
     <section class="section">
       <div class="section__container section-training">
         <div class="section-training__text-part">
           <h2 class="section__title">Тренировки</h2>
-          <p class="section__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+          <p class="section__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а
+            записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный
+            план.</p>
           <div class="section-training__links">
             <a href="" class="section-training__link">Strava</a>
             <a href="" class="section-training__link">Komoot</a>
@@ -289,32 +199,19 @@
       </div>
     </div>
   </footer>
+
+
+
+  <template id="bicycle-template">
+    <div class="swiper-slide">
+      <img class="bicycle-image" src="" alt="">
+      <span class="bicycle-title"></span>
+    </div>
+  </template>
+
+
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-
-<!--  слайдер с дорогами-->
-  <script>
-   
-  </script>
-
-<!--
-  сайдер с велосипедами-->
-
-  <script>
-    var swiper2 = new Swiper(".mySwiper2", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + "</span>";
-        },
-      },
-    });
-  </script>
   <script src="./script/script.js"></script>
 </body>
 

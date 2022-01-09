@@ -31,7 +31,7 @@
 .section-highway__carousel-button {
   width: 50px;
   height: 50px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border: none;
   border-radius: 50px;
   background-position: center;
@@ -57,4 +57,8 @@
 }
 .section-highway__carousel-road-icon_bg_tt {
   background-image: url("../images/slider-icon-tt.svg");
+}
+.section-highway__description {
+  -webkit-margin-after: 80px;
+          margin-block-end: 80px;
 }/*# sourceMappingURL=section-highway.css.map */

@@ -127,8 +127,6 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 1px;
-  -webkit-margin-before: 60px;
-          margin-block-start: 60px;
 }
 .section-intro__bike-caption {
   font-family: Inter, Arial, sans-serif;
@@ -167,6 +165,10 @@
   background-position: center;
   border-radius: 20px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.section-intro__description {
+  -webkit-margin-after: 60px;
+          margin-block-end: 60px;
 }
 
 .section-quote {
@@ -274,6 +276,10 @@
 }
 .section-highway__carousel-road-icon_bg_tt {
   background-image: url("../images/slider-icon-tt.svg");
+}
+.section-highway__description {
+  -webkit-margin-after: 80px;
+          margin-block-end: 80px;
 }
 
 .section-bicycles {

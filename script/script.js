@@ -1,6 +1,11 @@
 const title = document.querySelector('.carousel-title');
 const description = document.querySelector('.carousel-description');
 const roadIcon = document.querySelector('.section-highway__carousel-road-icon');
+// Шаблон велосипеда в слайдере.
+const bicycleTemplate = document.querySelector("#bicycle-template").content;
+// Контейнер для велосипедов.
+const bicycles = document.querySelector(".swiper-bicycles .swiper-wrapper");
+
 const infoArray = [
   {
     title: "Шоссе",
@@ -19,24 +24,113 @@ const infoArray = [
   }
 ];
 
+const highwayArray = [
+  {
+    title: "Cervelo Caledonia-5",
+    image: "./images/cervelo-caledonia-5.png"
+  },
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 40,
+  {
+    title: "Cannondale Systemsix Himod",
+    image: "./images/cannondale-systemsix-himod.png"
+  },
+
+  {
+    title: "Trek Domane SL-7",
+    image: "./images/trek-domane-sl-7.png"
+  }
+];
+
+const gravelArray = [
+  {
+    title: "Cervelo Aspero GRX 810",
+    image: "./images/cervelo-aspero-grx-810.png"
+  },
+  {
+    title: "Specialized S-Works Diverge",
+    image: "./images/specialized-s-works-diverge.png"
+  },
+  {
+    title: "Cannondale Topstone Lefty 3",
+    image: "./images/cannondale-topstone-lefty- 3.png"
+  }
+];
+
+const ttArray = [
+  {
+    title: "Specialized S-Works Shiv",
+    image: "./images/specialized-s-works-shiv.png"
+  },
+  {
+    title: "BMC Timemachine 01 ONE",
+    image: "./images/bmc-timemachine-01.png"
+  },
+  {
+    title: "Cervelo P-Series",
+    image: "./images/cervelo-p-series.png"
+  }
+];
+
+
+// Инициализация слайдера с местностями.
+const swiperLandscape = new Swiper(".swiper-landscape", {
+  slidesPerView: 1,
+  spaceBetween: 20,
   navigation: {
     nextEl: ".section-highway__carousel-button_move_next",
-    prevEl: ".section-highway__carousel-button_move_prev",
+    prevEl: ".section-highway__carousel-button_move_prev"
   },
   loop: true,
   on: {
-    init: function (sw) {
-      changeSliderItemInfo(sw.realIndex);
+    init: function (swiper) {
+      changeSliderItemInfo(swiper.realIndex);
     },
-    slideChange: function (sw) {
-      changeSliderItemInfo(sw.realIndex);
+    slideChange: function (swiper) {
+      changeSliderItemInfo(swiper.realIndex);
+    }
+  },
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
     }
   }
 });
+
+
+
+// Инициализация слайдера с велосипедами.
+var swiperBicycles = new Swiper(".swiper-bicycles", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + "</span>";
+    }
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      slidesPerGroup: 2
+    }
+  },
+  on: {
+    init: function (swiper) {
+      fillBicycleSlider(highwayArray);
+    }
+  }
+});
+
 
 function changeSliderItemInfo(index) {
   title.textContent = infoArray[index].title;
@@ -60,13 +154,25 @@ themeSwitch.addEventListener('click', () => {
 
 
 
+// Создать велосипед из шаблона.
+function createBicycleCard(data) {
+  const bicycleElement = bicycleTemplate.querySelector(".swiper-slide").cloneNode(true);
+  bicycleElement.querySelector(".bicycle-title").textContent = data.title;
+  const bicycleImage = bicycleElement.querySelector(".bicycle-image");
+  bicycleImage.src = data.image;
+  bicycleImage.alt = data.title;
+
+  return bicycleElement;
+}
 
 
-
-
-
-
-
+function fillBicycleSlider(bicycleArray) {
+  bicycles.textContent = "";
+  bicycleArray.forEach((bicycle) => {
+    const newBicycleCard = createBicycleCard(bicycle);
+    bicycles.append(newBicycleCard);
+  });
+};
 
 
 
