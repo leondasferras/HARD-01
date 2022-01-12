@@ -83,6 +83,7 @@
   max-width: 460px;
   color: var(--headers-color);
   display: inline-block;
+  padding-top: 80px;
 }
 .section__description {
   font-family: Inter, Arial, sans-serif;
@@ -97,22 +98,20 @@
 }
 
 .section-intro {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(300px 460px) minmax(200px 810px);
+  grid-template-rows: repeat(4, -webkit-min-content);
+  grid-template-rows: repeat(4, min-content);
   -webkit-padding-before: 80px;
           padding-block-start: 80px;
-}
-.section-intro__info-part {
-  display: flex;
-  flex-direction: column;
-}
-.section-intro__image-part {
-  position: relative;
 }
 .section-intro__main-image {
   -webkit-padding-before: 20px;
           padding-block-start: 20px;
+  position: relative;
+  grid-row: 1/6;
+  justify-self: end;
 }
 .section-intro__button {
   width: 180px;
@@ -171,6 +170,18 @@
           margin-block-end: 60px;
 }
 
+@media screen and (max-width: 1370px) {
+  .section-intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, -webkit-max-content);
+    grid-template-rows: repeat(8, max-content);
+    grid-auto-flow: unset;
+  }
+  .section-intro__main-image {
+    grid-row: 2/3;
+    justify-self: center;
+  }
+}
 .section-quote {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -250,7 +261,7 @@
 .section-highway__carousel-button {
   width: 50px;
   height: 50px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border: none;
   border-radius: 50px;
   background-position: center;

@@ -1,20 +1,16 @@
 .section-intro {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(300px 460px) minmax(200px 810px);
+  grid-template-rows: repeat(4, min-content);
   padding-block-start: 80px;
-
-  &__info-part {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  &__image-part {
-    position: relative;
-  }
+ 
 
   &__main-image {
     padding-block-start: 20px;
+    position: relative;
+    grid-row: 1 / 6;
+    justify-self: end;
   }
 
   &__button {
@@ -68,5 +64,19 @@
 
   &__description {
     margin-block-end: 60px;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .section-intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, max-content);
+    grid-auto-flow: unset;
+
+
+    &__main-image {
+      grid-row: 2/3;
+      justify-self: center;
+    }
   }
 }
