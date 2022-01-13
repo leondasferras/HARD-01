@@ -10,7 +10,7 @@
     box-sizing: border-box;
   }
   &__title {
-    @include font(700, 55px, 60px);
+    @include font(700, 55px, 109%);
     letter-spacing: -0.5px;
     margin: 0;
     padding-block-end: 50px;
@@ -20,7 +20,7 @@
   }
 
   &__description {
-    @include font(400, 18px, 28px);
+    @include font(400, 18px, 155%);
     max-width: 460px;
     margin: 0;
     color: var(--text-color);
@@ -42,6 +42,36 @@
 
     &__title {
       padding-top: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1070px) {
+  .section {
+
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section {
+
+    &__container {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+      padding-block-end: 40px;
+    }
+
+    &__description {
+      font-size: 12px ;
     }
   }
 }

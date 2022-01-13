@@ -1,6 +1,6 @@
 .section-quote {
   display: grid;
-  grid-template-columns: minmax(150px, 650px) max-content;
+  grid-template-columns: minmax(150px, 650px) minmax(150px, 650px);
   gap: 80px;
   padding-top: 120px;
   padding-bottom: 60px;
@@ -18,7 +18,7 @@
   }
 
   &__quote {
-    @include font(600, 34px, 44px);
+    @include font(600, 34px, 130%);
     max-width: 470px;
     color: var(--headers-color);
     letter-spacing: -0.5px;
@@ -38,5 +38,40 @@
   &__author-subline {
     @include font(400, 16px, 28px);
     color: var(--text-color);
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .section-quote {
+    gap: 40px;
+
+
+    &__quote {
+      font-size: 23px;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section-quote {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+
+
+    &__quote {
+      padding-bottom: 40px;
+    }
+
+    &__author-name {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &__author-subline {
+      font-size: 10px;
+      line-height: 16px;
+    }
   }
 }
