@@ -36,3 +36,12 @@
     transition: opacity 0.2s linear;
   }
 }
+
+@media screen and (max-width: 1370px) {
+  .header{
+
+    &__container {
+      padding: 28px 60px; 
+    }
+  }
+}

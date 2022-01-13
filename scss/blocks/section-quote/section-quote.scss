@@ -1,14 +1,14 @@
 .section-quote {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(150px, 650px) max-content;
   gap: 80px;
   padding-top: 120px;
   padding-bottom: 60px;
+  grid-auto-flow: column;
 
   &__main-image {
-    max-width:650px;
-    max-height: 460px;
-    justify-self: self-end;
+    width: 100%;
+
   }
 
   &__text-part {

@@ -77,6 +77,13 @@
     &__main-image {
       grid-row: 2/3;
       justify-self: center;
+      padding-block-end: 40px;
+    }
+    &__caption-line {
+      display: none;
+    }
+    &__bike-caption {
+      display: none;
     }
   }
 }

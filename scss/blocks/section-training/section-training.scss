@@ -2,18 +2,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 150px 120px 120px;
+  padding-block-start:  150px;
+  padding-block-end: 120px;
+  padding-inline-end: 120px;
+  align-items: flex-start;
+  
 
   &__text-part {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
 
 
   }
 
   &__main-image {
-    height: 460px;
-    width: 580px;
+   object-fit: contain;
+    max-width: 50%;
+    flex-shrink: 5;
   }
 
   &__links {
@@ -29,4 +35,11 @@
     @include font (600, 18px, 28px);
     color:var(--headers-color);
   }
+}
+
+@media screen and (max-width: 1370px) {
+  .section-training {
+    padding-inline-end: 60px;
+  }
+  
 }

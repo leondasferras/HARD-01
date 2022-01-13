@@ -31,4 +31,11 @@
 }
 .section-bicycles__carousel-picture {
   width: 340px;
+}
+
+@media screen and (max-width: 1370px) {
+  .section-bicycles {
+    -webkit-padding-end: 60px;
+            padding-inline-end: 60px;
+  }
 }/*# sourceMappingURL=section-bicycles.css.map */
