@@ -4,6 +4,25 @@
   -webkit-padding-end: 120px;
           padding-inline-end: 120px;
 }
+.section-bicycles__links {
+  display: grid;
+  grid-template-columns: repeat(3, -webkit-max-content);
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: 1fr;
+  gap: 40px;
+  justify-content: end;
+}
+.section-bicycles__link {
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.7;
+}
+.section-bicycles__link_active {
+  color: var(--headers-color);
+  opacity: 1;
+  font-weight: 600;
+}
 .section-bicycles__carousel-container {
   overflow: hidden;
 }

@@ -140,6 +140,25 @@ function changeSliderItemInfo(index) {
   roadIcon.classList.add(infoArray[index].icon);
 }
 
+//Переключение слайдера с велосипедами
+document.querySelector('.section-bicycles__link_highway').addEventListener('click', (event) => {
+  document.querySelector('.section-bicycles__link_active').classList.remove('section-bicycles__link_active');
+  event.target.classList.add('section-bicycles__link_active');
+  fillBicycleSlider(highwayArray);
+})
+
+document.querySelector('.section-bicycles__link_gravel').addEventListener('click', (event) => {
+  document.querySelector('.section-bicycles__link_active').classList.remove('section-bicycles__link_active');
+  event.target.classList.add('section-bicycles__link_active');
+  fillBicycleSlider(gravelArray);
+})
+
+document.querySelector('.section-bicycles__link_tt').addEventListener('click', (event) => {
+  document.querySelector('.section-bicycles__link_active').classList.remove('section-bicycles__link_active');
+  event.target.classList.add('section-bicycles__link_active');
+  fillBicycleSlider(ttArray);
+})
+
 
 
 

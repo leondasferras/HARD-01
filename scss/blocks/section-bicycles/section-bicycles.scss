@@ -2,6 +2,26 @@
   padding-block-start: 60px;
   padding-inline-end: 120px;
 
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: 1fr;
+    gap: 40px;
+    justify-content: end;
+  }
+
+  &__link {
+    @include font (400, 18px, 28px);
+    color: var(--text-color);
+    opacity: 0.7;
+
+    &_active {
+      color: var(--headers-color);
+      opacity: 1;
+      font-weight: 600;
+    }
+  }
+
   &__carousel-container {
     overflow: hidden;
   }
@@ -36,6 +56,10 @@
   &__carousel-picture {
     width: 340px;
   }
+}
+
+.bicycle-title  {
+  @include font(600, 18px, 22px)
 }
 
 @media screen and (max-width: 1370px) {
