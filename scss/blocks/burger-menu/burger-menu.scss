@@ -1,0 +1,20 @@
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  
+
+  &__links {
+    margin: 0;
+    list-style: none;
+
+  }
+
+  &__link {
+    padding: none;
+  }
+}
