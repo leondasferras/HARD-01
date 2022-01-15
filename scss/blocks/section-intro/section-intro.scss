@@ -4,7 +4,11 @@
   grid-template-columns: minmax(300px 460px) minmax(200px 810px);
   grid-template-rows: repeat(4, min-content);
   padding-block-start: 80px;
- 
+  
+
+  &__title {
+    padding-block-start: 77px;
+  }
 
   &__main-image {
     padding-block-start: 20px;
@@ -47,8 +51,8 @@
 
   &__sticky-container {
     position: absolute;
-    min-height: 45%;
-    top: 40%;
+    min-height: 50%;
+    top: 45%;
     left: -200px;
   }
 
@@ -61,12 +65,13 @@
     background-color: #F4F4F4;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     border-radius: 20px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   &__description {
-    margin-block-end: 60px;
+    margin-block-end: 54px;
   }
 }
 
@@ -119,4 +124,37 @@
     }
   }
   
+}
+
+@media screen and (max-width: 600px) {
+  .section-intro {
+    padding-left: 18px;
+
+
+    &__bike-image {
+      width: 234px;
+      height: 160px;
+      background-size: 198px;
+      
+    }
+
+    &__button {
+      width: 100%;
+    }
+
+    &__title {
+      padding-block-start: 34px;
+    }
+
+    &__image {
+      min-width: 254px;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+
+    &__sticky-container {
+      left: -2px;
+      top: 38%;
+    }
+  }
 }

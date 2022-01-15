@@ -1,1 +1,1 @@
-{"version":3,"sources":["burger-menu.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,eAAA;EACA,MAAA;EACA,SAAA;EACA,QAAA;EACA,OAAA;AACF;AAGE;EACE,SAAA;EACA,gBAAA;AADJ;AAKE;EACE,aAAA;AAHJ","file":"burger-menu.css"}
+{"version":3,"sources":["burger-menu.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,eAAA;EACA,MAAA;EACA,SAAA;EACA,QAAA;EACA,OAAA;EACA,sCAAA;EACA,eAAA;AACF;AACE;EACE,aAAA;AACJ;AAIE;EACE,SAAA;EACA,gBAAA;AAFJ;AAME;EACE,aAAA;AAJJ","file":"burger-menu.css"}

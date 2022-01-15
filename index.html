@@ -44,6 +44,7 @@
           <li class="header__link">Тренировки</li>
         </ul>
       </nav>
+      <div class="header__burger-button"></div>
     </div>
   </header>
   <main class="content">
@@ -54,16 +55,23 @@
         <li class="burger-menu__link"> Велосипеды </li>
         <li class="burger-menu__link"> Тренировки</li>
       </ul>
+      <div class="burger-menu__theme-switch ">
+        <img src="./images/light-theme-icon.svg" alt="свет">
+        <div class="burger-menu__switch-container">
+          <div class="burger-menu__switch"></div>
+        </div>
+        <img src="./images/dark-theme-icon.svg" alt="тьма">
+      </div>
     </section>
     <section class="section">
       <div class="section__container section-intro">
 
-          <h1 class="section__title">
-            Шоссе, ТТ и Грэвел
+          <h1 class="section__title section-intro__title">
+            Шоссе, ТТ и&nbsp;Грэвел
           </h1>
           <p class="section__description section-intro__description">
-            Триатлонные старты, горные серпантины или грейвел заезды по живописным
-            маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.
+            Триатлонные старты, горные серпантины или грейвел заезды по&nbsp;живописным
+маршрутам&nbsp;нужно только определиться с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
           </p>
           <button class="section-intro__button" type="button">Подробнее</button>
           <span class="section-intro__bike-caption">
@@ -98,12 +106,12 @@
     </section>
     <section class="section">
       <div class="section__container section-highway">
-        <h2 class="section__title carousel-title">
+        <h2 class="section__title carousel-title section-highway__title">
         </h2>
         <p class="section__description section-highway__description carousel-description">
         </p>
 
-        <div class="swiper swiper-landscape">
+        <div class="swiper swiper-landscape section-highway__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="images/road-turn.png"></div>
             <div class="swiper-slide"><img src="images/wood-biker.png"></div>
@@ -121,13 +129,13 @@
     </section>
     <section class="section">
       <div class="section__container section-bicycles">
-        <h2 class="section__title">Велосипеды</h2>
+        <h2 class="section__title section-bicycles__title">Велосипеды</h2>
         <div class="section-bicycles__links">
           <span class="section-bicycles__link section-bicycles__link_highway section-bicycles__link_active"> Шоссе </span>
           <span class="section-bicycles__link section-bicycles__link_gravel"> Грэвел </span>
           <span class="section-bicycles__link section-bicycles__link_tt"> ТТ </span>
         </div>
-        <div class="swiper swiper-bicycles">
+        <div class="swiper swiper-bicycles section-bicycles__swiper">
           <div class="swiper-wrapper">
           </div>
           <div class="swiper-pagination">
@@ -139,8 +147,7 @@
     <section class="section">
       <div class="section__container section-training">
           <h2 class="section__title">Тренировки</h2>
-          <p class="section__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а
-            записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный
+          <p class="section__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а&nbsp;записать эти тренировки поможет приложение Strava, а&nbsp;также это приложение позволит построить тренировочный
             план.</p>
           <div class="section-training__links">
             <a href="" class="section-training__link">Strava</a>
@@ -158,9 +165,12 @@
           <input type="email" class="footer__subscribe-input" placeholder="Ваш e-mail">
           <button class="footer__subscribe-button" type="button">ok</button>
         </form>
-        <span class="footer__copyright">&copy;Road Club 2021</span>
+        <span class="footer__copyright">&copy;Road Club 2021
+          <div class="footer__logo">
+          </div>
+        </span>
       </div>
-      <div class="footer__theme-switch">
+      <div class="footer__theme-switch ">
         <img src="./images/light-theme-icon.svg" alt="свет">
         <div class="footer__switch-container">
           <div class="footer__switch"></div>

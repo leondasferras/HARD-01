@@ -1,5 +1,5 @@
 .section-bicycles {
-  padding-block-start: 60px;
+  padding-block-start: 78px;
   padding-inline-end: 120px;
 
   &__links {
@@ -8,6 +8,8 @@
     grid-template-rows: 1fr;
     gap: 40px;
     justify-content: end;
+    margin-block-start: -79px;
+    margin-block-end: 123px;
   }
 
   &__link {
@@ -61,10 +63,35 @@
 .bicycle-title  {
   @include font(600, 18px, 22px);
   color: var(--headers-color);
+  padding-block-start: 18px;
+  padding-inline-start: 6px;
+  display: inline-block;
 }
 
 @media screen and (max-width: 1370px) {
   .section-bicycles {
   padding-inline-end: 60px;
   }
+}
+
+@media screen and (max-width: 850px) {
+  .section-bicycles {
+  padding-inline-end: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section-bicycles {
+    padding-block-start: 68px;
+
+    &__links {
+      display: none;
+    }
+
+  
+  
+  &__title {
+    padding-bottom: 91px;
+  }
+}
 }

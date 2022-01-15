@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding-block-end: 50px;
-  padding-block-start: 60px;
+  padding-block-start: 65px;
 
   &__carousel-wrapper {
     overflow: hidden;
@@ -65,4 +65,52 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .section-highway {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, max-content);
+    grid-auto-flow: row;
+  
 
+    &__title {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &__swiper {
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+    }
+
+    &__carousel-buttons {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: end;
+      align-self: flex-start;
+      margin: 0;
+      gap: 11px;
+      padding-top: 8px;
+    }
+
+    &__carousel-button {
+      width: 24px;
+      height: 24px;
+      background-size: 6px;
+    }
+
+    &__carousel-road-icon {
+      width: 70px;
+      height: 28px;
+      background-size: contain;
+    }
+    
+    &__description {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+      padding-top: 37px;
+      margin-bottom: 0;
+    }
+
+}
+}

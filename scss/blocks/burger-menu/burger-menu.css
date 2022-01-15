@@ -5,6 +5,11 @@
   bottom: 0;
   right: 0;
   left: 0;
+  background-color: var(--main-bg-color);
+  z-index: 100500;
+}
+.burger-menu_active {
+  display: flex;
 }
 .burger-menu__links {
   margin: 0;

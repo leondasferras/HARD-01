@@ -65,22 +65,21 @@
     padding: 28px 60px;
   }
 }
-.burger-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+@media screen and (max-width: 600px) {
+  .header__container {
+    padding: 27px 17px;
+  }
+  .header__navigation {
+    display: none;
+  }
+  .header__burger-button {
+    display: flex;
+    background-image: url("../images/burger-button.svg");
+    width: 23px;
+    height: 22px;
+    background-repeat: no-repeat;
+  }
 }
-.burger-menu__links {
-  margin: 0;
-  list-style: none;
-}
-.burger-menu__link {
-  padding: none;
-}
-
 .section {
   width: 100%;
   background-color: var(--main-bg-color);
@@ -99,8 +98,8 @@
   line-height: 109%;
   letter-spacing: -0.5px;
   margin: 0;
-  -webkit-padding-after: 50px;
-          padding-block-end: 50px;
+  -webkit-padding-after: 44px;
+          padding-block-end: 44px;
   max-width: 460px;
   color: var(--headers-color);
   display: inline-block;
@@ -156,6 +155,10 @@
   -webkit-padding-before: 80px;
           padding-block-start: 80px;
 }
+.section-intro__title {
+  -webkit-padding-before: 77px;
+          padding-block-start: 77px;
+}
 .section-intro__main-image {
   -webkit-padding-before: 20px;
           padding-block-start: 20px;
@@ -200,8 +203,8 @@
 }
 .section-intro__sticky-container {
   position: absolute;
-  min-height: 45%;
-  top: 40%;
+  min-height: 50%;
+  top: 45%;
   left: -200px;
 }
 .section-intro__bike-image {
@@ -214,12 +217,13 @@
   background-color: #F4F4F4;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   border-radius: 20px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .section-intro__description {
-  -webkit-margin-after: 60px;
-          margin-block-end: 60px;
+  -webkit-margin-after: 54px;
+          margin-block-end: 54px;
 }
 
 @media screen and (max-width: 1370px) {
@@ -260,11 +264,37 @@
     padding-top: 0;
   }
 }
+@media screen and (max-width: 600px) {
+  .section-intro {
+    padding-left: 18px;
+  }
+  .section-intro__bike-image {
+    width: 234px;
+    height: 160px;
+    background-size: 198px;
+  }
+  .section-intro__button {
+    width: 100%;
+  }
+  .section-intro__title {
+    -webkit-padding-before: 34px;
+            padding-block-start: 34px;
+  }
+  .section-intro__image {
+    min-width: 254px;
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+  .section-intro__sticky-container {
+    left: -2px;
+    top: 38%;
+  }
+}
 .section-quote {
   display: grid;
-  grid-template-columns: minmax(150px, 650px) minmax(150px, 650px);
+  grid-template-columns: minmax(150px, 650px) minmax(150px, 522px);
   gap: 80px;
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 60px;
   grid-auto-flow: column;
 }
@@ -331,13 +361,22 @@
     line-height: 16px;
   }
 }
+@media screen and (max-width: 600px) {
+  .section-quote {
+    padding-top: 99px;
+    padding-bottom: 16px;
+  }
+  .section-quote__quote {
+    padding-bottom: 35px;
+  }
+}
 .section-highway {
   display: flex;
   flex-direction: column;
   -webkit-padding-after: 50px;
           padding-block-end: 50px;
-  -webkit-padding-before: 60px;
-          padding-block-start: 60px;
+  -webkit-padding-before: 65px;
+          padding-block-start: 65px;
 }
 .section-highway__carousel-wrapper {
   overflow: hidden;
@@ -396,9 +435,51 @@
           margin-block-end: 80px;
 }
 
+@media screen and (max-width: 600px) {
+  .section-highway {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, -webkit-max-content);
+    grid-template-rows: repeat(3, max-content);
+    grid-auto-flow: row;
+  }
+  .section-highway__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .section-highway__swiper {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  .section-highway__carousel-buttons {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: flex-start;
+    margin: 0;
+    gap: 11px;
+    padding-top: 8px;
+  }
+  .section-highway__carousel-button {
+    width: 24px;
+    height: 24px;
+    background-size: 6px;
+  }
+  .section-highway__carousel-road-icon {
+    width: 70px;
+    height: 28px;
+    background-size: contain;
+  }
+  .section-highway__description {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding-top: 37px;
+    margin-bottom: 0;
+  }
+}
 .section-bicycles {
-  -webkit-padding-before: 60px;
-          padding-block-start: 60px;
+  -webkit-padding-before: 78px;
+          padding-block-start: 78px;
   -webkit-padding-end: 120px;
           padding-inline-end: 120px;
 }
@@ -409,6 +490,10 @@
   grid-template-rows: 1fr;
   gap: 40px;
   justify-content: end;
+  -webkit-margin-before: -79px;
+          margin-block-start: -79px;
+  -webkit-margin-after: 123px;
+          margin-block-end: 123px;
 }
 .section-bicycles__link {
   font-family: Inter, Arial, sans-serif;
@@ -458,6 +543,11 @@
   font-size: 18px;
   line-height: 22px;
   color: var(--headers-color);
+  -webkit-padding-before: 18px;
+          padding-block-start: 18px;
+  -webkit-padding-start: 6px;
+          padding-inline-start: 6px;
+  display: inline-block;
 }
 
 @media screen and (max-width: 1370px) {
@@ -466,13 +556,31 @@
             padding-inline-end: 60px;
   }
 }
+@media screen and (max-width: 850px) {
+  .section-bicycles {
+    -webkit-padding-end: 18px;
+            padding-inline-end: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-bicycles {
+    -webkit-padding-before: 68px;
+            padding-block-start: 68px;
+  }
+  .section-bicycles__links {
+    display: none;
+  }
+  .section-bicycles__title {
+    padding-bottom: 91px;
+  }
+}
 .section-training {
   display: grid;
   grid-auto-flow: column;
   -webkit-padding-before: 150px;
           padding-block-start: 150px;
-  -webkit-padding-after: 120px;
-          padding-block-end: 120px;
+  -webkit-padding-after: 212px;
+          padding-block-end: 212px;
   -webkit-padding-end: 120px;
           padding-inline-end: 120px;
   grid-template-columns: minmax(0px, 460px) minmax(0, 580px);
@@ -518,6 +626,8 @@
     grid-template-rows: repeat(4, -webkit-min-content);
     grid-template-rows: repeat(4, min-content);
     grid-auto-flow: row;
+    -webkit-padding-end: 18px;
+            padding-inline-end: 18px;
   }
   .section-training__main-image {
     grid-row: 2/3;
@@ -529,6 +639,14 @@
   .section-training__link {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-training {
+    -webkit-padding-before: 109px;
+            padding-block-start: 109px;
+    -webkit-padding-after: 0;
+            padding-block-end: 0;
   }
 }
 .footer {
@@ -562,7 +680,7 @@
   min-width: 360px;
   display: flex;
   flex-direction: row;
-  padding: 11px 20px;
+  padding: 7px 17px;
 }
 .footer__subscribe-input {
   font-family: Inter, Arial, sans-serif;
@@ -627,9 +745,110 @@
   z-index: 20;
   transition: transform 250ms;
 }
+.footer__logo {
+  display: none;
+  background-image: url("../images/mobile-footer-logo.svg");
+  width: 38px;
+  height: 38px;
+  align-self: flex-end;
+}
 
 @media screen and (max-width: 1370px) {
   .footer__container {
     padding: 60px 40px;
   }
+}
+@media screen and (max-width: 600px) {
+  .footer__container {
+    display: block;
+    padding: 51px 18px;
+  }
+  .footer__subscribe-title {
+    margin-bottom: 41px;
+  }
+  .footer__copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__theme-switch {
+    display: none;
+  }
+  .footer__logo {
+    display: flex;
+  }
+  .footer__subscribe-form {
+    min-width: unset;
+    margin-bottom: 92px;
+  }
+}
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--main-bg-color);
+  z-index: 100500;
+  flex-direction: column;
+  padding-top: 23px;
+  padding-right: 15px;
+}
+.burger-menu_active {
+  display: flex;
+}
+.burger-menu__exit-button {
+  background-image: url("../images/burger-exit-button.svg");
+  width: 34px;
+  height: 34px;
+  align-self: flex-end;
+}
+.burger-menu__links {
+  margin: 0;
+  list-style: none;
+  padding-top: 96px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+.burger-menu__link {
+  padding: none;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  justify-content: center;
+  color: var(--headers-color);
+}
+.burger-menu__theme-switch {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 36px;
+  left: calc(50vw - 81px);
+}
+.burger-menu__switch-container {
+  width: 44px;
+  height: 24px;
+  border-radius: 20px;
+  background: var(--switch-background-color);
+  margin: 0 20px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.burger-menu__switch-container_active div {
+  transform: translateX(20px);
+  transition: transform 250ms;
+}
+.burger-menu__switch {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #24B47E;
+  z-index: 20;
+  transition: transform 250ms;
 }/*# sourceMappingURL=index.css.map */

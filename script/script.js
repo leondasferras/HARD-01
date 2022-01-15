@@ -170,6 +170,12 @@ themeSwitch.addEventListener('click', () => {
   page.classList.toggle("page_dark")
 })
 
+const themeSwitch2 = document.querySelector('.burger-menu__switch-container');
+themeSwitch2.addEventListener('click', () => {
+  themeSwitch2.classList.toggle("burger-menu__switch-container_active")
+  page.classList.toggle("page_dark")
+})
+
 
 
 
@@ -194,9 +200,23 @@ function fillBicycleSlider(bicycleArray) {
 };
 
 
+//Открытие бургер меню
 
+document.querySelector('.header__burger-button').addEventListener('click', () => {
+  document.querySelector('.burger-menu').classList.add('burger-menu_active')
+})
 
+//Закрытие бургер меню
 
+document.querySelector('.burger-menu__exit-button').addEventListener('click', () => {
+  document.querySelector('.burger-menu').classList.remove('burger-menu_active')
+})
+
+//Клик по кнопке ok (sunscribe)
+
+document.querySelector('.footer__subscribe-button').addEventListener('click', () => {
+  document.querySelector('.footer__subscribe-input').value = "Круто!!!"
+})
 
 
 

@@ -2,7 +2,7 @@
   display: grid;
   grid-auto-flow: column;
   padding-block-start:  150px;
-  padding-block-end: 120px;
+  padding-block-end: 212px;
   padding-inline-end: 120px;
   grid-template-columns: minmax(0px, 460px) minmax(0, 580px);
   grid-template-rows: 110px max-content max-content;
@@ -53,6 +53,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     grid-auto-flow: row;
+    padding-inline-end: 18px;
     
 
 
@@ -72,4 +73,12 @@
     }
   }
   
+}
+
+
+@media screen and (max-width: 600px) {
+  .section-training {
+    padding-block-start: 109px;
+    padding-block-end: 0;
+  }
 }
