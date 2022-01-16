@@ -1,0 +1,102 @@
+.section-bicycles {
+  padding-block-start: 78px;
+  padding-inline-end: 120px;
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: 1fr;
+    gap: 40px;
+    justify-content: end;
+    margin-block-start: -79px;
+    margin-block-end: 123px;
+  }
+
+  &__link {
+    @include font(400, 18px, 28px);
+    color: var(--text-color);
+    opacity: 0.7;
+
+    &_active {
+      color: var(--headers-color);
+      opacity: 1;
+      font-weight: 600;
+    }
+  }
+
+  &__link:hover {
+    opacity: 0.5;
+    transition: opacity 0.2s linear;
+  }
+
+  &__carousel-container {
+    overflow: hidden;
+  }
+
+  &__carousel-track {
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+  }
+
+  &__carousel-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__carousel-picture-wrapper {
+    width: 380px;
+    height: 380px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-inline-end: 30px;
+    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+  }
+
+  &__carousel-picture {
+    width: 340px;
+  }
+}
+
+.bicycle-title {
+  @include font(600, 18px, 22px);
+  color: var(--headers-color);
+  padding-block-start: 18px;
+  padding-inline-start: 6px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1370px) {
+  .section-bicycles {
+    padding-inline-end: 60px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section-bicycles {
+    padding-inline-end: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section-bicycles {
+    padding-block-start: 68px;
+
+    &__links {
+      display: none;
+    }
+
+    &__title {
+      padding-bottom: 91px;
+    }
+  }
+
+  .bicycle-title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

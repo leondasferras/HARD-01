@@ -1,0 +1,90 @@
+.section-quote {
+  display: grid;
+  grid-template-columns: minmax(150px, 650px) minmax(150px, 522px);
+  gap: 80px;
+  padding-top: 110px;
+  padding-bottom: 60px;
+  grid-auto-flow: column;
+
+  &__main-image {
+    width: 100%;
+
+  }
+
+  &__text-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__quote {
+    @include font(600, 34px, 129%);
+    max-width: 470px;
+    color: var(--headers-color);
+    letter-spacing: -0.5px;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author-name {
+    @include font(500, 20px, 32px);
+    color: var(--headers-color);
+    margin-bottom: 6px;
+  }
+
+  &__author-subline {
+    @include font(400, 16px, 28px);
+    color: var(--text-color);
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .section-quote {
+    gap: 40px;
+
+
+    &__quote {
+      font-size: 23px;
+      line-height: 126%;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section-quote {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+
+
+    &__quote {
+      padding-bottom: 40px;
+    }
+
+    &__author-name {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &__author-subline {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section-quote {
+    padding-top: 99px;
+    padding-bottom: 16px;
+
+
+    &__quote {
+      padding-bottom: 35px;
+    }
+  }
+}

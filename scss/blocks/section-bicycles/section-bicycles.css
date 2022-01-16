@@ -1,0 +1,60 @@
+.section-bicycles {
+  -webkit-padding-before: 60px;
+          padding-block-start: 60px;
+  -webkit-padding-end: 120px;
+          padding-inline-end: 120px;
+}
+.section-bicycles__links {
+  display: grid;
+  grid-template-columns: repeat(3, -webkit-max-content);
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: 1fr;
+  gap: 40px;
+  justify-content: end;
+}
+.section-bicycles__link {
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0.7;
+}
+.section-bicycles__link_active {
+  color: var(--headers-color);
+  opacity: 1;
+  font-weight: 600;
+}
+.section-bicycles__carousel-container {
+  overflow: hidden;
+}
+.section-bicycles__carousel-track {
+  display: flex;
+  flex-direction: row;
+  transition: 0.3s;
+}
+.section-bicycles__carousel-item {
+  display: flex;
+  flex-direction: row;
+}
+.section-bicycles__carousel-picture-wrapper {
+  width: 380px;
+  height: 380px;
+  padding: 20px;
+  background-color: #F4F4F4;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  -webkit-margin-end: 30px;
+          margin-inline-end: 30px;
+  filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+}
+.section-bicycles__carousel-picture {
+  width: 340px;
+}
+
+@media screen and (max-width: 1370px) {
+  .section-bicycles {
+    -webkit-padding-end: 60px;
+            padding-inline-end: 60px;
+  }
+}/*# sourceMappingURL=section-bicycles.css.map */

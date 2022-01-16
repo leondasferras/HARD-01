@@ -1,0 +1,20 @@
+.page {
+  width: 100%;
+  margin: 0;
+  --main-bg-color: #F4F4F4;
+  --footer-bg-color: #EFEFEF;
+  --headers-color: #151515;
+  --text-color:#222222;
+  --line-color: #D7D4D4;
+  --switch-background-color: #fff;
+  --carousel-buttons-color: #EBEBEB;
+}
+.page_dark {
+  --main-bg-color: #333333;
+  --footer-bg-color: #2F2F2F;
+  --headers-color: #FFFFFF;
+  --text-color: #E5E5E5;
+  --line-color: #707070;
+  --switch-background-color: #545454;
+  --carousel-buttons-color: #434343;
+}/*# sourceMappingURL=page.css.map */

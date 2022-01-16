@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title>Шоссе, ТТ и Грэвел</title>
+
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <nav class="header__navigation">
+        <ul class="header__links">
+          <li class="header__link">Покрытия и градиенты</li>
+          <li class="header__link">Велосипеды</li>
+          <li class="header__link">Тренировки</li>
+        </ul>
+      </nav>
+      <div class="header__burger-button"></div>
+    </div>
+  </header>
+  <main class="content">
+    <section class="burger-menu">
+      <span class="burger-menu__exit-button"></span>
+      <ul class="burger-menu__links">
+        <li class="burger-menu__link"> Покрытия и градиенты</li>
+        <li class="burger-menu__link"> Велосипеды </li>
+        <li class="burger-menu__link"> Тренировки</li>
+      </ul>
+      <div class="burger-menu__theme-switch ">
+        <img src="./images/light-theme-icon.svg" alt="свет">
+        <div class="burger-menu__switch-container">
+          <div class="burger-menu__switch"></div>
+        </div>
+        <img src="./images/dark-theme-icon.svg" alt="тьма">
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__container section-intro">
+
+          <h1 class="section__title section-intro__title">
+            Шоссе, ТТ и&nbsp;Грэвел
+          </h1>
+          <p class="section__description section-intro__description">
+            Триатлонные старты, горные серпантины или грейвел заезды по&nbsp;живописным
+маршрутам&nbsp;нужно только определиться с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
+          </p>
+          <button class="section-intro__button" type="button">Подробнее</button>
+          <span class="section-intro__bike-caption">
+            Cannondale Systemsix
+            <span class="section-intro__caption-line">
+            </span>
+          </span>
+
+
+          <div class="section-intro__main-image"> 
+            <img class="section-intro__image" src="./images/wood-road.png" alt="Дорога в лес">
+            <div class="section-intro__sticky-container">
+              <div class="section-intro__bike-image">
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__container section-quote">
+        <img src="./images/mountain-road.png" alt="Горная дорога" class="section-quote__main-image">
+        <div class="section-quote__text-part">
+          <p class="section-quote__quote">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</p>
+          <div class="section-quote__author">
+            <span class="section-quote__author-name">Эдди Меркс</span>
+            <span class="section-quote__author-subline">Велогонщик</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__container section-highway">
+        <h2 class="section__title carousel-title section-highway__title">
+        </h2>
+        <p class="section__description section-highway__description carousel-description">
+        </p>
+
+        <div class="swiper swiper-landscape section-highway__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/road-turn.png" alt="Поворот дороги"></div>
+            <div class="swiper-slide"><img src="images/wood-biker.png" alt="Велосипедист в лесу"></div>
+            <div class="swiper-slide"><img src="images/field-road.png" alt= "Дорога в поле"></div>
+          </div>
+          <div class="section-highway__carousel-road-icon section-highway__carousel-road-icon_bg_highway "></div>
+        </div>
+
+        <div class="section-highway__carousel-buttons">
+          <button class="section-highway__carousel-button section-highway__carousel-button_move_prev"></button>
+          <button class="section-highway__carousel-button section-highway__carousel-button_move_next"></button>
+        </div>
+
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__container section-bicycles">
+        <h2 class="section__title section-bicycles__title">Велосипеды</h2>
+        <div class="section-bicycles__links">
+          <span class="section-bicycles__link section-bicycles__link_highway section-bicycles__link_active"> Шоссе </span>
+          <span class="section-bicycles__link section-bicycles__link_gravel"> Грэвел </span>
+          <span class="section-bicycles__link section-bicycles__link_tt"> ТТ </span>
+        </div>
+        <div class="swiper swiper-bicycles section-bicycles__swiper">
+          <div class="swiper-wrapper">
+          </div>
+          <div class="swiper-pagination">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__container section-training">
+          <h2 class="section__title">Тренировки</h2>
+          <p class="section__description">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а&nbsp;записать эти тренировки поможет приложение Strava, а&nbsp;также это приложение позволит построить тренировочный
+            план.</p>
+          <div class="section-training__links">
+            <a href="" class="section-training__link">Strava</a>
+            <a href="" class="section-training__link">Komoot</a>
+          </div>
+        <img class="section-training__main-image" src="./images/training-road.png" alt="Поворот дороги">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__subscribe-and-copyright">
+        <h3 class="footer__subscribe-title">Подпишитесь на рассылку —</h3>
+        <form class="footer__subscribe-form">
+          <input type="email" class="footer__subscribe-input" placeholder="Ваш e-mail">
+          <button class="footer__subscribe-button" type="button">ok</button>
+        </form>
+        <span class="footer__copyright">&copy;Road Club 2021
+          <span class="footer__logo">
+          </span>
+        </span>
+      </div>
+      <div class="footer__theme-switch ">
+        <img src="./images/light-theme-icon.svg" alt="свет">
+        <div class="footer__switch-container">
+          <div class="footer__switch"></div>
+        </div>
+        <img src="./images/dark-theme-icon.svg" alt="тьма">
+      </div>
+    </div>
+  </footer>
+
+
+
+  <template id="bicycle-template">
+    <div class="swiper-slide">
+      <img class="bicycle-image" src="" alt="">
+      <span class="bicycle-title"></span>
+    </div>
+  </template>
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
