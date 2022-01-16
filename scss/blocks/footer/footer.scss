@@ -49,6 +49,11 @@
       display: block;
     }
 
+    }
+    &__subscribe-form:hover {
+      opacity: 0.5;
+      transition: opacity 0.2s linear;
+
   }
   &__subscribe-button {
     display: none;
@@ -84,6 +89,10 @@
       transition: transform 250ms;
 
     }
+  }
+  &__switch-container:hover {
+      opacity: 0.5;
+      transition: opacity 0.2s linear;
   }
 
 

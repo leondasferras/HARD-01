@@ -38,6 +38,11 @@
     @include font (600, 18px, 28px);
     color:var(--headers-color);
   }
+
+  &__link:hover {
+    opacity: 0.75;
+    transition: opacity 0.2s linear;
+  }
 }
 
 @media screen and (max-width: 1370px) {

@@ -13,7 +13,7 @@
   }
 
   &__link {
-    @include font (400, 18px, 28px);
+    @include font(400, 18px, 28px);
     color: var(--text-color);
     opacity: 0.7;
 
@@ -24,6 +24,11 @@
     }
   }
 
+  &__link:hover {
+    opacity: 0.5;
+    transition: opacity 0.2s linear;
+  }
+
   &__carousel-container {
     overflow: hidden;
   }
@@ -31,22 +36,19 @@
   &__carousel-track {
     display: flex;
     flex-direction: row;
-    transition: .3s;
-
-
+    transition: 0.3s;
   }
 
   &__carousel-item {
     display: flex;
     flex-direction: row;
-    
   }
 
   &__carousel-picture-wrapper {
     width: 380px;
     height: 380px;
     padding: 20px;
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -60,7 +62,7 @@
   }
 }
 
-.bicycle-title  {
+.bicycle-title {
   @include font(600, 18px, 22px);
   color: var(--headers-color);
   padding-block-start: 18px;
@@ -70,13 +72,13 @@
 
 @media screen and (max-width: 1370px) {
   .section-bicycles {
-  padding-inline-end: 60px;
+    padding-inline-end: 60px;
   }
 }
 
 @media screen and (max-width: 850px) {
   .section-bicycles {
-  padding-inline-end: 18px;
+    padding-inline-end: 18px;
   }
 }
 
@@ -88,10 +90,13 @@
       display: none;
     }
 
-  
-  
-  &__title {
-    padding-bottom: 91px;
+    &__title {
+      padding-bottom: 91px;
+    }
   }
-}
+
+  .bicycle-title {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }

@@ -31,7 +31,11 @@
     padding: 16px 0;
     @include font(600, 14px, 18px);
     letter-spacing: 1px;
+  }
 
+  &__button:hover {
+    opacity: 0.75;
+    transition: opacity 0.2s linear;
   }
 
   &__bike-caption {
@@ -140,7 +144,10 @@
 
     &__button {
       width: 100%;
+      font-size: 13px;
+      line-height: 19px;
     }
+
 
     &__title {
       padding-block-start: 34px;
