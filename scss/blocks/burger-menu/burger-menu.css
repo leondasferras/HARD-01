@@ -1,0 +1,20 @@
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--main-bg-color);
+  z-index: 100500;
+}
+.burger-menu_active {
+  display: flex;
+}
+.burger-menu__links {
+  margin: 0;
+  list-style: none;
+}
+.burger-menu__link {
+  padding: none;
+}/*# sourceMappingURL=burger-menu.css.map */

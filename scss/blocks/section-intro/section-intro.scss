@@ -1,0 +1,167 @@
+.section-intro {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(300px 460px) minmax(200px 810px);
+  grid-template-rows: repeat(4, min-content);
+  padding-block-start: 80px;
+  
+
+  &__title {
+    padding-block-start: 77px;
+  }
+
+  &__main-image {
+    padding-block-start: 20px;
+    position: relative;
+    grid-row: 1 / 6;
+    justify-self: end;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__button {
+    width: 180px;
+    color: #FFFFFF;
+    background-color: #24B47E;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    padding: 16px 0;
+    @include font(600, 14px, 18px);
+    letter-spacing: 1px;
+  }
+
+  &__button:hover {
+    opacity: 0.75;
+    transition: opacity 0.2s linear;
+  }
+
+  &__bike-caption {
+    @include font(400, 18px, 18px);
+    color: var(--headers-color);
+    margin-block-start: 167px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__caption-line {
+    width: 132px;
+    border-top: 2px solid var(--line-color);
+    display: inline-block;
+    margin-inline-start: 30px;
+  }
+
+  &__sticky-container {
+    position: absolute;
+    min-height: 50%;
+    top: 45%;
+    left: -200px;
+  }
+
+  &__bike-image {
+    position: sticky;
+    height: 300px;
+    width: 440px;
+    top: 150px;
+    background-image: url("../images/cannondale-systemsix-himod.png");
+    background-color: #F4F4F4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  &__description {
+    margin-block-end: 54px;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .section-intro {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, min-content);
+    grid-auto-flow: unset;
+
+
+    &__main-image {
+      grid-row: 2/3;
+      justify-self: center;
+      padding-block-end: 40px;
+      text-align: center;
+    }
+    &__caption-line {
+      display: none;
+    }
+    &__bike-caption {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .section-intro {
+
+
+    &__sticky-container {
+      left: -100px;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 850px) {
+  .section-intro {
+    padding-left: 48px;
+    padding-right: 18px;
+
+
+    &__sticky-container {
+      left: -30px;
+
+    }
+
+    &__main-image {
+      padding-top: 0;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .section-intro {
+    padding-left: 18px;
+
+
+    &__bike-image {
+      width: 234px;
+      height: 160px;
+      background-size: 198px;
+      
+    }
+
+    &__button {
+      width: 100%;
+      font-size: 13px;
+      line-height: 19px;
+    }
+
+
+    &__title {
+      padding-block-start: 34px;
+    }
+
+    &__image {
+      min-width: 254px;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+
+    &__sticky-container {
+      left: -2px;
+      top: 38%;
+    }
+  }
+}
