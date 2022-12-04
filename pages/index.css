@@ -55,6 +55,10 @@
   font-family: Inter, Arial, sans-serif;
   cursor: pointer;
 }
+.header__link__item {
+  text-decoration: none;
+  color: var(--headers-color);
+}
 .header__link:hover {
   opacity: 0.75;
   transition: opacity 0.2s linear;
@@ -602,7 +606,6 @@
   .section-bicycles__title {
     padding-bottom: 91px;
   }
-
   .bicycle-title {
     font-size: 14px;
     line-height: 18px;
@@ -867,6 +870,10 @@
   line-height: 18px;
   text-align: center;
   justify-content: center;
+  color: var(--headers-color);
+}
+.burger-menu__link__item {
+  text-decoration: none;
   color: var(--headers-color);
 }
 .burger-menu__theme-switch {

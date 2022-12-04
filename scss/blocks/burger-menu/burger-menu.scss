@@ -37,6 +37,11 @@
     text-align: center;
     justify-content: center;
     color: var(--headers-color);
+
+    &__item {
+      text-decoration: none;
+      color: var(--headers-color)
+    }
   }
   &__theme-switch {
     align-self: flex-end;

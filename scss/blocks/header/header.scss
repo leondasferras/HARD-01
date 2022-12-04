@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  
+
   &__container {
     max-width: 1440px;
     margin: 0 auto;
@@ -29,6 +29,11 @@
   &__link {
     font-family: $font-stack;
     cursor: pointer;
+
+    &__item {
+      text-decoration: none;
+      color: var(--headers-color);
+    }
   }
 
   &__link:hover {
@@ -38,18 +43,15 @@
 }
 
 @media screen and (max-width: 1370px) {
-  .header{
-
+  .header {
     &__container {
-      padding: 28px 60px; 
+      padding: 28px 60px;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .header {
-    
-    
     &__container {
       padding: 27px 17px;
     }
@@ -60,12 +62,10 @@
 
     &__burger-button {
       display: flex;
-      background-image: url('../images/burger-button.svg');
+      background-image: url("../images/burger-button.svg");
       width: 23px;
       height: 22px;
       background-repeat: no-repeat;
     }
-
-
   }
 }

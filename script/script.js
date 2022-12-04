@@ -220,82 +220,10 @@ document.querySelector('.footer__subscribe-button').addEventListener('click', ()
 
 
 
-
-
-
-
-
-
-
-
-
-// Слайдер для велосипедов.
-/*
-
-function bicyclesSlider() {
-  let position = 0;
-  let gap = 1230;
-
-  const track = document.querySelector('.section-bicycles__carousel-track');
-  const btnHighway = document.querySelector('.button-highway');
-  const btnGravel = document.querySelector('.button-gravel');
-  const btnTT = document.querySelector('.button-tt');
-
-  btnHighway.addEventListener('click', () => {
-    changeActiveDot(0);
-
-    if (position === -gap) {
-    track.style.transform = `translateX(${position + gap}px)`;
-    position += gap;
-     }
-
-    else if (position === -(gap * 2)) {
-    track.style.transform = `translateX(${position + gap*2}px)`
-      }
-    position = 0;
-    console.log(position);
+//Закрываем бургер меню при переходе по ссылке
+const burgerLinks = document.querySelectorAll(".burger-menu__link__item")
+burgerLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    document.querySelector('.burger-menu').classList.remove('burger-menu_active')
   })
-
-  btnGravel.addEventListener('click', () => {
-    changeActiveDot(1);
-    if (position === 0) {
-      track.style.transform = `translateX(${position - gap}px)`;
-      position -= gap;
-    }
-    else if (position === -(gap * 2)) {
-      track.style.transform = `translateX(${position + gap}px)`;
-      position += gap;
-    }
-  })
-
-  btnTT.addEventListener('click', () => {
-
-    changeActiveDot(2);
-    if (position === 0) {
-      track.style.transform = `translateX(${position - gap*2}px)`;
-      position -= gap*2;
-    }
-
-    else if (position === -gap) {
-      track.style.transform = `translateX(${position - gap}px)`;
-      position -= gap;
-    }
-    console.log(position);
-
-  })
-
-}
-;
-
-function changeActiveDot(newActiveElement) {
-  const dots = document.querySelectorAll('.section-bicycles__button')
-  const dotArray = [...dots];
-  const activeDot = dotArray.find((dot) =>
-      dot.classList.contains("active-dot")
-  );
-  activeDot.classList.remove("active-dot");
-  dotArray[newActiveElement].classList.add("active-dot");
-};
-
-bicyclesSlider();
-*/
+} )
